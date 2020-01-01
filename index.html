@@ -8,13 +8,16 @@
 		<canvas id="gameCanvas" width="1080" height="1440"></canvas>
 		<script type="text/javascript" src="cocos2d-js-v3.13.js" charset="UTF-8"></script>
 		<script src="register.js"></script>
-		<script src ="fill.js"></script>	
+		<script src ="fill.js"></script>
+		<script src="hzzc.js"></script>	
 		<script type="text/javascript">
 			new VConsole();
+			let alarm = alert;
 			alarm('这只是一个模拟程序，请不要当真。');
 			window.onload = function() {
 			cc.game.onStart=()=>{
-				cc.LoaderScene.preload(['res/Register/4x3/register.json','res/Register/4x3/fill.json'],()=>{cc.director.runScene(new register())});
+				cc.LoaderScene.preload(['res/Register/4x3/register.json','res/Register/4x3/fill.json','res/Register/4x3/hzzc.json'],()=>{
+					cc.director.runScene(new register())});
 			};
 			cc.game.run("gameCanvas");
 };

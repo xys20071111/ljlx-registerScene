@@ -9,6 +9,10 @@ let register = cc.Scene.extend({
 		let agreementCheckbox = Panel.getChildByName("CheckBox_69");
 		let parentButton = Panel.getChildByName("Button_42");
 		let teacherButton = Panel.getChildByName("Button_44");
-		parentButton.addTouchEventListener((sender,type)=>{if(type == ccui.Widget.TOUCH_ENDED){cc.director.pushScene(new fill())}},this);
+		parentButton.addTouchEventListener((sender,type)=>{
+			if(type == ccui.Widget.TOUCH_ENDED /* && agreementCheckbox.getSelectState() */){
+				cc.director.pushScene(new hzzc())
+			}
+		},this);
 		}
 	});
