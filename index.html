@@ -11,6 +11,7 @@
 		<script src ="fill.js"></script>	
 		<script type="text/javascript">
 			new VConsole();
+			alarm('这只是一个模拟程序，请不要当真。');
 			window.onload = function() {
 			cc.game.onStart=()=>{
 				cc.LoaderScene.preload(['res/Register/4x3/register.json','res/Register/4x3/fill.json'],()=>{cc.director.runScene(new register())});
